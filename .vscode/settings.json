@@ -2,5 +2,8 @@
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "conventionalCommits.scopes": [
+    "components"
+  ]
 }
