@@ -4,6 +4,7 @@
     "source.fixAll.eslint": true
   },
   "conventionalCommits.scopes": [
-    "components"
+    "components",
+    "graphql"
   ]
 }
