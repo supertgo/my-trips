@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import AboutTemplate from '.';
+import Pages from '.';
 
 jest.mock('components/LinkWrapper', () => {
   return {
@@ -10,10 +10,21 @@ jest.mock('components/LinkWrapper', () => {
   };
 });
 
+const props = {
+  heading: 'My Trips',
+  body: '<p>Hy everyone, this is the wrap of my trips</p>'
+};
+
 describe('', () => {
   it('should render the template', () => {
-    render(<AboutTemplate />);
+    render(<Pages {...props} />);
 
     expect(screen.getByTestId('Mock LinkWrapper')).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: /My Trips/i })
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Hy everyone, this is the wrap of my trips/i)
+    ).toBeInTheDocument();
   });
 });
