@@ -6,6 +6,7 @@
   "conventionalCommits.scopes": [
     "components",
     "graphql",
-    "templates"
+    "templates",
+    "pages"
   ]
 }
